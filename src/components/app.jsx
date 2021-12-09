@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import SearchBar from './searchform';
+import Gif from './gif';
+import GifList from './giflist';
 
 class App extends Component {
   // constructor(props){
@@ -9,17 +12,11 @@ class App extends Component {
     return(
       <div>
         <div className='left-scene'>
-          <div className='form-search'>
-
-          </div>
-          <div className="selected-gif">
-
-          </div>
+          <SearchBar />
+          <Gif />
         </div>
         <div className='right-scene'>
-          <div className="gif-list">
-
-          </div>
+          <GifList />
         </div>
       </div>
     );
