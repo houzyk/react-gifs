@@ -23,7 +23,8 @@ body {
 
   .form-search {
     padding: 60px 60px 60px 120px;
-    border: none;
+    border: 1px solid black;
+    background-color: rgb(221, 218, 218);
     font-size: 2.6em;
     box-shadow: none;
     &:focus {

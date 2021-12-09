@@ -9,6 +9,7 @@ class GifList extends Component {
   render () {
     return(
       <div className="gif-list">
+
       </div>
     );
   }
