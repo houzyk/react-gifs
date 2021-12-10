@@ -25,15 +25,21 @@ class App extends Component {
       });
   }
 
+  selectGif(id) {
+    this.setState({ gifID: id });
+  }
+
   render() {
     return (
       <div>
         <div className="left-scene">
           <SearchBar searchParam={this.apiSearch} />
-          <Gif gifID={this.state.gifID} />
+          <div className="selected-gif">
+            <Gif gifID={this.state.gifID} />
+          </div>
         </div>
         <div className="right-scene">
-          <GifList gifIds={this.state.gifs}/>
+          <GifList gifIds={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
