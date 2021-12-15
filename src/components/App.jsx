@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import giphy from "giphy-api";
+// import giphy from "giphy-api";
 
 import Gif from "./Gif";
 import Gifs from "./Gifs";
@@ -12,14 +12,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      selectedGifId: "",
+      selectedGifId: "QxHQ4BtLeEGBlWIFTs",
       gifsIds: []
     };
   }
 
   search = (q) => {
-    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}&limit=15`;
-    fetch(giphEndpoint)
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}&limit=15`;
+    fetch(url)
       .then(response => response.json())
       .then((data) => {
         const gifs = data.data.map(gif => gif.id);
