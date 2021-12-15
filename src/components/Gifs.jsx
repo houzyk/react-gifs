@@ -6,7 +6,7 @@ function Gifs (props) {
   return (
     <div className="gif-list">
       {props.ids.map((id) =>
-        <Gif
+        <Gif clickFunction={props.clickFunction}
           id={id}
           key={id}
         />
